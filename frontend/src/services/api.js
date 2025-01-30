@@ -27,7 +27,6 @@ export const updateDocument = async (id, content) => {
   return response.data;
 };
 
-export const checkGrammar = async (text) => {
-  const response = await axios.post(`${API_BASE_URL}/grammar/check`, { text });
-  return response.data;
+export const deleteDocument = async (id) => {
+  const response = await axios.delete(`${API_BASE_URL}/documents/${id}`); 
 };
